@@ -1,117 +1,102 @@
-//I am rich app
-//moduale_1;
+//Mi card
+//modual_06
 
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: IamRich()));
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Myapps(),
+  ));
 }
 
-class IamRich extends StatelessWidget {
-  const IamRich({super.key});
+class Myapps extends StatelessWidget {
+  const Myapps({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // backgroundColor: Colors.blueGrey,
-        appBar: AppBar(
-          backgroundColor: Colors.blueGrey[900],
-          title: Text("I am rich"),
-          centerTitle: true,
-          actions: [
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Hello(),
-                    ));
-              },
-              child: Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: Icon(Icons.settings),
+      backgroundColor: Colors.teal,
+      body: SafeArea(
+        child: Container(
+            width: double.maxFinite,
+            height: double.maxFinite,
+            color: Colors.teal,
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              CircleAvatar(
+                  backgroundColor: Color.fromARGB(0, 232, 217, 217),
+                  radius: 80,
+                  backgroundImage: AssetImage("assets/images/bibek.jpg")),
+              SizedBox(
+                height: 15,
               ),
-            )
-          ],
-        ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
+              Text("Bibek Bohora(avatar)",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25.0,
+                      fontFamily: "Pacifico")),
+              Text(
+                "Flutter Developer",
+                style: TextStyle(
+                    fontFamily: "Sono",
+                    fontSize: 22.0,
+                    color: Color.fromARGB(255, 248, 249, 250)),
+              ),
+              Container(
+                height: 1,
+                margin: EdgeInsets.all(10.2),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 248, 246, 245),
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: Colors.white),
+                height: 60,
+                padding: EdgeInsets.only(left: 50, right: 50),
+                margin: EdgeInsets.only(left: 11, right: 11),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.call,
+                        color: Colors.red,
+                      ),
+                      // Expanded(child: Container()),
+                      Text(
+                        " +977-9843111113",
+                        style: TextStyle(),
+                      )
+                    ]),
+              ),
               SizedBox(
                 height: 10,
               ),
-              // Container(
-              //   width: double.maxFinite,
-              //   height: 80,
-              //   decoration: BoxDecoration(
-              //     color: Color.fromARGB(255, 230, 29, 15),
-              //     border: Border.all(
-              //         style: BorderStyle.solid,
-              //         strokeAlign: StrokeAlign.center,
-              //         width: 3.0,
-              //         color: Color.fromARGB(255, 10, 186, 10)),
-              //     borderRadius: BorderRadius.circular(20),
-              //   ),
-              // ),
-              Image(
-                image: NetworkImage(
-                    "https://yt3.ggpht.com/ytc/AMLnZu8oKErv2C88eNdFG6ucuVOtLtpxsG-4ckUymaCy=s900-c-k-c0x00ffffff-no-rj"),
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: Colors.white),
+                height: 60,
+                padding: EdgeInsets.only(left: 50, right: 50),
+                margin: EdgeInsets.only(left: 11, right: 11),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.mail, color: Colors.red),
+                      // Expanded(child: Container()),
+                      Text(
+                        "isavtar0977@gmail.com",
+                        style: TextStyle(),
+                      )
+                    ]),
               ),
-              Image.network(
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDENWjNXUpxuPTRGDgQE_xFDA7G1sWnKyIvg&usqp=CAU"),
-              ElevatedButton(
-                  onPressed: () {
-                    ScaffoldMessenger.of(context)
-                        .showMaterialBanner(MaterialBanner(
-                      backgroundColor: Colors.red,
-                      content: Text("hello from messanger"),
-                      actions: [
-                        TextButton(
-                            onPressed: () {
-                              debugPrint("helloo");
-                              ScaffoldMessenger.of(context)
-                                  .hideCurrentMaterialBanner();
-                            },
-                            child: Text("quite"))
-                      ],
-                    ));
-                  },
-                  child: Text("helloo"))
-            ],
-          ),
-        ));
-  }
-}
-
-class Hello extends StatelessWidget {
-  const Hello({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.green,
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 20, 130, 185),
-        title: Text("Setting"),
-        centerTitle: true,
-        actions: [
-          GestureDetector(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Padding(
-              padding: const EdgeInsets.only(right: 8.0),
-              child: Icon(Icons.home),
-            ),
-          )
-        ],
-      ),
-      body: Center(
-        child: Container(
-          width: 100,
-          height: 500,
-          child: Text("hello from hello"),
-        ),
+            ])),
       ),
     );
   }
