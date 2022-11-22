@@ -61,9 +61,15 @@ class Myapps extends StatelessWidget {
                 child: Padding(
                     padding: const EdgeInsets.all(4.0),
                     child: ListTile(
-                      leading: Icon(Icons.contact_phone,
-                          color: Color.fromARGB(255, 172, 9, 243)),
-                      title: Text("+977-9843111113"),
+                      leading: Icon(Icons.contact_phone, color: Colors.teal),
+                      title: Text(
+                        "+977-9843111113",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            color: Colors.teal,
+                            fontFamily: "Sono"),
+                      ),
                     )),
               ),
               const SizedBox(
@@ -77,11 +83,15 @@ class Myapps extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(4.0),
                   child: ListTile(
-                    leading: Icon(Icons.mail,
-                        color: Color.fromARGB(255, 163, 7, 247)),
+                    autofocus: true,
+                    leading: Icon(Icons.mail, color: Colors.teal),
                     title: Text(
                       "isavtar0977@gmail.com",
-                      style: TextStyle(),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.teal,
+                          fontSize: 18,
+                          fontFamily: "Sono"),
                     ),
                   ),
                 ),
@@ -91,15 +101,3 @@ class Myapps extends StatelessWidget {
     );
   }
 }
-
-
-  // mainAxisAlignment: MainAxisAlignment.start,
-                    // children: const [
-                    //   Icon(Icons.mail, color: Colors.red),
-                    //   SizedBox(
-                    //     width: 110,
-                    //   ),
-                    //   Text(
-                    //     "isavtar0977@gmail.com",
-                    //     style: TextStyle(),
-                    //   )
